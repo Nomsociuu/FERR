@@ -38,8 +38,9 @@ const HomePage = () => {
       {/* <Homes /> */}
       <Upcoming items={upcomingMovies} title="Upcoming Movies" />
       <Upcoming items={latestMovies} title="Latest Movies" />
-      {/* <Trending /> */}
+      <Trending />
       <Upcoming items={recommendedMovies} title="Recommended Movies" />
+      
       <Footer />
     </>
   );

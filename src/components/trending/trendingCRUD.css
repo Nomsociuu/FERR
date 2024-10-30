@@ -19,8 +19,8 @@
     padding: 15px;
     text-align: left;
     position: relative;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #080808;
+    box-shadow: 0 4px 8px rgba(224, 175, 175, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
