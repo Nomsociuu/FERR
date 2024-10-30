@@ -1,22 +1,30 @@
 // App.js
-
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./home/HomePage";
-import Trending from "./components/trending/Trending";
+import 'bootstrap/dist/css/bootstrap.min.css';// Ensure FontAwesome is imported for icons
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './reducers/trendingStore';
+import Home from './components/homes/Home';
+import Trending from './components/trending/Trending';
+import TrendingCRUD from './components/trending/TrendingCRUD';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/trending" element={<Trending />} />
-        <Route path='/singlepage/:id' component={Trailer} exact />
-      </Routes>
-    </Router>
-
+    <Provider store={store}>
+      <Router>
+        {/* Header is outside Routes so it appears on all pages */}
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trending" element={<Trending />} />
+          <Route path="/trendingCRUD" element={<TrendingCRUD />} />
+        </Routes>
+        {/* Footer is also outside Routes for global use */}
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 

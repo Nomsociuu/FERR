@@ -1,40 +1,110 @@
+/* footer.css */
+
 footer {
-    background-color: #191919;
-    margin-top: 100px;
-    padding: 50px 0;
-  }
-  footer .container {
-    display: grid;
-    grid-template-columns: 6fr 2fr 2fr;
-    grid-gap: 30px;
-  }
-  footer ul {
-    margin-bottom: 30px;
-  }
-  footer ul li {
-    margin-right: 30px;
-  }
-  footer i {
-    width: 40px;
-    height: 40px;
+  background-color: #111; /* Dark background */
+  color: #fff;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .box {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer .box h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer .box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer .box ul li {
+  cursor: pointer;
+}
+
+.footer .box ul li:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer .box p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 12px;
+  color: #ccc; /* Slightly lighter color for the paragraph */
+}
+
+.footer .box .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .box .social-icons i {
+  font-size: 18px;
+  color: #ccc; /* Lighter color for icons */
+  transition: color 0.3s ease;
+}
+
+.footer .box .social-icons i:hover {
+  color: #fff; /* Change to white on hover */
+}
+
+.footer .box .app-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer .box .app-icons img {
+  width: 120px;
+  height: auto;
+}
+
+.footer .box .app-icons span {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
     align-items: center;
-    line-height: 40px !important;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin-right: 20px;
-    margin-top: 50px;
   }
-  footer .img {
-    margin-top: 40px;
+  
+  .footer .box {
+    margin-bottom: 20px;
+    text-align: center;
   }
-  footer span {
-    font-size: 12px;
+
+  .footer .box ul {
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  @media only screen and (max-width: 768px) {
-    footer .container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 30px;
-    }
+
+  .footer .box .app-icons {
+    justify-content: center;
   }
+}
