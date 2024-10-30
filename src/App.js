@@ -1,4 +1,5 @@
 // App.js
+
 import 'bootstrap/dist/css/bootstrap.min.css';// Ensure FontAwesome is imported for icons
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -9,6 +10,9 @@ import Trending from './components/trending/Trending';
 import TrendingCRUD from './components/trending/TrendingCRUD';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+
+import Trailer from "./components/watch/Trailer";
+
 
 function App() {
   return (
