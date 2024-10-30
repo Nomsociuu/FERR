@@ -1,10 +1,23 @@
-import React, { useState } from "react";
-import "../homes/home.css";
-import { homeData } from "../../dummyData";
+import React, { useState, useEffect } from "react";
+import "./home.css";
 import Home from "./Home";
 
 const Homes = () => {
-    const [items, setItems] = useState(homeData);
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        const fetchHomeData = async () => {
+            try {
+                const response = await fetch("http://localhost:5000/homeData");
+                const data = await response.json();
+                setItems(data);
+            } catch (error) {
+                console.error("Error fetching home data:", error);
+            }
+        };
+
+        fetchHomeData();
+    }, []);
 
     return (
         <>

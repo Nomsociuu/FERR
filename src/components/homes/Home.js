@@ -1,31 +1,53 @@
-import React, { useState, useEffect } from "react";
-import Home from "./Home"; // Import the Home component
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import HomeCard from "./HomeCard";
 
-const Homes = () => {
-    const [items, setItems] = useState([]);
+const SampleNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="control-btn" onClick={onClick}>
+            <button className="next">
+                <i className="fa fa-chevron-right"></i>
+            </button>
+        </div>
+    );
+};
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("http://localhost:5000/homeData"); // URL to your json-server
-                const data = await response.json();
-                setItems(data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
+const SamplePrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="control-btn" onClick={onClick}>
+            <button className="prev">
+                <i className="fa fa-chevron-left"></i>
+            </button>
+        </div>
+    );
+};
 
-        fetchData();
-    }, []);
+const Home = ({ items }) => {
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+    };
 
     return (
         <>
-            <section className="home">
-                <Home items={items} />
-            </section>
-            <div className="margin"></div> {/* Ensure this class is styled in home.css */}
+            <div className="homeContainer">
+                <Slider {...settings}>
+                    {items.map((item) => (
+                        <HomeCard key={item.id} item={item} />
+                    ))}
+                </Slider>
+            </div>
         </>
     );
 };
 
-export default Homes;
+export default Home;
