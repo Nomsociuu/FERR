@@ -1,3 +1,4 @@
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -19,6 +20,6 @@ function App() {
       </Router>
     </Provider>
   );
-}
+};
 
 export default App;
