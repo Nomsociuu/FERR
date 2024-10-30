@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -14,6 +15,7 @@ body {
 a {
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
 }
@@ -24,13 +26,16 @@ ul {
   align-items: center;
 
 }
+
 .flex {
   display: flex;
 }
+
 .container {
   max-width: 90%;
   margin: auto;
 }
+
 button {
   background: #e50813;
   outline: none;
@@ -40,9 +45,11 @@ button {
   font-weight: 500;
   font-size: 17px;
 }
+
 .row {
   width: 50%;
 }
+
 p {
   line-height: 30px;
 }
@@ -58,6 +65,7 @@ p {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .control-btn .next {
   position: absolute;
   top: 50%;
@@ -105,14 +113,13 @@ p {
   left: 0;
   width: 430px;
   height: 300px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(20, 20, 20, 0.4) 50%,
-    rgba(83, 100, 141, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(20, 20, 20, 0.4) 50%,
+      rgba(83, 100, 141, 0) 100%);
   z-index: -1;
 }
+
 .MovieBox img {
   position: absolute;
   top: 0;
@@ -164,7 +171,7 @@ p {
   /* Optional: Add slight rounding for aesthetics */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Smooth transition on hover */  
+  /* Smooth transition on hover */
 }
 
 .primary-btn:hover {
