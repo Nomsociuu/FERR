@@ -6,6 +6,7 @@ import { fetchUpcoming } from "../services/UpcomingServices";
 import { UpcomingReducer } from "../reducers/UpcomingReducer";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
+import LatestMoviesCarousel from "../components/latest/latestMovie";
 
 const HomePage = () => {
   const [upcomingMovies, dispatchUpcoming] = useReducer(UpcomingReducer, []);
@@ -40,7 +41,7 @@ const HomePage = () => {
       <Upcoming items={latestMovies} title="Latest Movies" />
       <Trending />
       <Upcoming items={recommendedMovies} title="Recommended Movies" />
-      
+      {/* <LatestMoviesCarousel /> */}
       <Footer />
     </>
   );
