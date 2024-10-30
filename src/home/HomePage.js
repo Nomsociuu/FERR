@@ -41,7 +41,7 @@ const HomePage = () => {
       <Upcoming items={latestMovies} title="Latest Movies" />
       <Trending />
       <Upcoming items={recommendedMovies} title="Recommended Movies" />
-      <LatestMoviesCarousel />
+      {/* <LatestMoviesCarousel /> */}
       <Footer />
     </>
   );
