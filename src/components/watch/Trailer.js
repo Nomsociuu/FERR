@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Card, Button } from "react-bootstrap";
-import Upcomming from "../upcoming/Upcomming";
+import Upcoming from "../upcoming/Upcoming";
 import "./style.css";
 
 const Trailer = () => {
@@ -64,7 +64,7 @@ const Trailer = () => {
         <div>Loading...</div>
       )}
       <h2 className="mt-4">Recommended Movies</h2>
-      <Upcomming items={rec} title='Recommended Movies' />
+      <Upcoming items={rec} title='Recommended Movies' />
     </Container>
   );
 };
