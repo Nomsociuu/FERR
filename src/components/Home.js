@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="text-center my-5">
       <img
-        src="images/learning_online.jpg"
+        src="images/img/slide1.png"
         alt="Online Courses"
         className="img-fluid"
         style={{ maxWidth: '100%' }}
