@@ -1,0 +1,23 @@
+body {
+  background-color: #141414;
+}
+
+.card {
+  border: none; /* Remove card border */
+}
+
+.card-title {
+  font-size: 2rem; /* Increase title size */
+}
+
+.card-subtitle {
+  font-size: 1.2rem; /* Increase subtitle size */
+}
+
+.card-text {
+  line-height: 1.5; /* Improve readability */
+}
+
+button {
+  margin-right: 10px; /* Add space between buttons */
+}

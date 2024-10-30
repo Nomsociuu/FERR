@@ -1,12 +1,19 @@
-import React from "react";
-import Homes from "./components/homes/Home"; // adjust the path if needed
+
+// App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Trending from './components/trending/Trending';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Movie List</h1>
-      <Homes />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/trending" element={<Trending />} />
+      </Routes>
+    </Router>
   );
 }
 
