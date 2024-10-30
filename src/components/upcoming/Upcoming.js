@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useReducer, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Ucard from "./Ucard";
 import Slider from "react-slick";
+import { fetchUpcoming } from "../../services/UpcomingServices";
+import { UpcomingReducer } from "../../reducers/UpcomingReducer";
+import "./Upcoming.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -10,22 +13,38 @@ const SampleNextArrow = (props) => {
   return (
     <div className="control-btn" onClick={onClick}>
       <button className="next">
-        <i class="fa fa-chevron-right"></i>
+        <i className="fa fa-chevron-right"></i>
       </button>
     </div>
   );
 };
+
 const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="control-btn" onClick={onClick}>
       <button className="prev">
-        <i class="fa fa-chevron-left"></i>
+        <i className="fa fa-chevron-left"></i>
       </button>
     </div>
   );
 };
-const Upcoming = ({ items, title }) => {
+
+const Upcoming = ({ title }) => {
+  const [items, dispatch] = useReducer(UpcomingReducer, []);
+
+  useEffect(() => {
+    const getUpcomingItems = async () => {
+      try {
+        const data = await fetchUpcoming();
+        dispatch({ type: "FETCH_UPCOMING", payload: data });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getUpcomingItems();
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,

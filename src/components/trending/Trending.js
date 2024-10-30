@@ -1,7 +1,7 @@
 // Trending.js
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchTrending } from '../../services/trendingServices';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTrending } from "../../services/trendingServices";
 
 function Trending() {
   const dispatch = useDispatch();
@@ -30,8 +30,12 @@ function Trending() {
               <div className="card-body">
                 <h5 className="card-title">{item.name}</h5>
                 <p className="card-text">{item.desc}</p>
-                <p><strong>Rating:</strong> {item.rating}</p>
-                <p><strong>Time:</strong> {item.time}</p>
+                <p>
+                  <strong>Rating:</strong> {item.rating}
+                </p>
+                <p>
+                  <strong>Time:</strong> {item.time}
+                </p>
               </div>
             </div>
           </div>
