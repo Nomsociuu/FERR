@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
 import { useParams } from "react-router-dom";
+import { Container, Card, Button } from "react-bootstrap";
 import Upcomming from "../upcoming/Upcomming";
+import "./style.css";
 
 const Trailer = () => {
   const { id } = useParams();
@@ -10,7 +11,6 @@ const Trailer = () => {
 
   useEffect(() => {
     const fetchItem = async () => {
-      // Fetching item data from json-server
       const response = await fetch(`http://localhost:3000/homeData/${id}`);
       if (response.ok) {
         const data = await response.json();
@@ -21,7 +21,6 @@ const Trailer = () => {
     };
 
     const fetchRecommended = async () => {
-      // Fetching recommended data from json-server
       const response = await fetch(`http://localhost:3000/recommended`);
       if (response.ok) {
         const data = await response.json();
@@ -35,38 +34,39 @@ const Trailer = () => {
     fetchRecommended();
   }, [id]);
 
+  // Share functions
+  const shareOnFacebook = () => {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+    window.open(url, "_blank");
+  };
+
+  const shareOnTwitter = () => {
+    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(item.name)}`;
+    window.open(url, "_blank");
+  };
+
   return (
-    <>
+    <Container className="mt-4">
       {item ? (
-        <>
-          <section className='singlePage'>
-            <div className='singleHeading'>
-              <h1>{item.name} </h1> <span> | {item.time} | </span> <span> HD </span>
-            </div>
-            <div className='container'>
-              <video src={item.video} controls></video>
-              <div className='para'>
-                <h3>Date : {item.date}</h3>
-                <p>{item.desc}</p>
-                <p>Get access to the direct Project Overview with this report. Just by a quick glance, you’ll have an idea of the total tasks allotted to the team, number of milestones given & completed, total Links created for the project and the total time taken by all the users. Each section would elaborate the data further, if chosen.</p>
-                <p>Get access to the direct Project Overview with this report. Just by a quick glance, you’ll have an idea of the total tasks allotted to the team, number of milestones given & completed, total Links created for the project and the total time taken by all the users. Each section would elaborate the data further, if chosen.</p>
-                <p>Get access to the direct Project Overview with this report. Just by a quick glance, you’ll have an idea of the total tasks allotted to the team, number of milestones given & completed, total Links created for the project and the total time taken by all the users. Each section would elaborate the data further, if chosen.</p>
-              </div>
-              <div className='soical'>
-                <h3>Share : </h3>
-                <img src='https://img.icons8.com/color/48/000000/facebook-new.png' />
-                <img src='https://img.icons8.com/fluency/48/000000/twitter-circled.png' />
-                <img src='https://img.icons8.com/fluency/48/000000/linkedin-circled.png' />
-              </div>
-            </div>
-          </section>
-          <Upcomming items={rec} title='Recommended Movies' />
-        </>
+        <Card className="bg-dark text-white">
+          <Card.Body>
+            <Card.Title>{item.name}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              {item.time} | HD
+            </Card.Subtitle>
+            <video className="w-100" src={item.video} controls></video>
+            <Card.Text className="mt-3">{item.desc}</Card.Text>
+            <Button variant="primary" onClick={shareOnFacebook} className="mr-2">Share on Facebook</Button>
+            <Button variant="info" onClick={shareOnTwitter}>Share on Twitter</Button>
+          </Card.Body>
+        </Card>
       ) : (
-        "Loading..."
+        <div>Loading...</div>
       )}
-    </>
+      <h2 className="mt-4">Recommended Movies</h2>
+      <Upcomming items={rec} title='Recommended Movies' />
+    </Container>
   );
-}
+};
 
 export default Trailer;
