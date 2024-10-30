@@ -1,4 +1,5 @@
 // App.js
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/trending" element={<Trending />} />
+        <Route path='/singlepage/:id' component={Trailer} exact />
       </Routes>
     </Router>
   );
