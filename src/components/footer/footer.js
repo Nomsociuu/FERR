@@ -2,6 +2,7 @@ import React from "react";
 // import { homeData } from "../../dummyData"
 import "./footer.css";
 
+
 const Footer = () => {
   return (
     <>
