@@ -7,6 +7,7 @@ import store from './reducers/trendingStore';
 import HomePage from './home/HomePage';
 import Trending from './components/trending/Trending';
 import TrendingCRUD from './components/trending/TrendingCRUD';
+import Trailer from './components/watch/Trailer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/trendingCRUD" element={<TrendingCRUD />} />
+          <Route path="/singlepage/:id" element={<Trailer />} />
         </Routes>
       </Router>
     </Provider>
