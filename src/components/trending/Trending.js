@@ -1,7 +1,13 @@
 // Trending.js
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrending } from '../../services/trendingServices';
+import { Carousel } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import './trending.css';
+
 
 function Trending() {
   const dispatch = useDispatch();
@@ -11,32 +17,34 @@ function Trending() {
     dispatch(fetchTrending());
   }, [dispatch]);
 
-  if (error) {
-    return <div>Error fetching trending data: {error.message}</div>;
-  }
-
-  if (trending.length === 0) {
-    return <div>No trending items available.</div>;
-  }
-
   return (
-    <div className="container my-5">
-      <h2 className="text-center my-5">Trending Movies</h2>
-      <div className="row">
+    <div className="trending-container">
+      {/* Carousel */}
+      <Carousel>
         {trending.map((item) => (
-          <div key={item.id} className="col-md-4 mb-4">
-            <div className="card">
-              <img src={item.cover} className="card-img-top" alt={item.name} />
-              <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
-                <p className="card-text">{item.desc}</p>
-                <p><strong>Rating:</strong> {item.rating}</p>
-                <p><strong>Time:</strong> {item.time}</p>
+          <Carousel.Item key={item.id} className="carousel-item-custom">
+            <img src={item.cover} alt={item.name} className="carousel-image" />
+            <div className="carousel-overlay">
+              <div className="carousel-content">
+                <h2 className="carousel-title">{item.name}</h2>
+                <p className="carousel-rating">{item.rating} (IMDb)</p>
+                <p className="carousel-time">{item.time}</p>
+                <p className="carousel-desc">{item.desc}</p>
+                <p><span className="carousel-label">Starring:</span> {item.starring}</p>
+                <p><span className="carousel-label">Genres:</span> {item.genres}</p>
+                <p><span className="carousel-label">Tags:</span> {item.tags}</p>
+                <button className="play-now-button">Play Now</button>
+              </div>
+              <div className="watch-trailer">
+                <button className="trailer-button">
+                  <FontAwesomeIcon icon={faPlay} size="lg" />
+                </button>
+
               </div>
             </div>
-          </div>
+          </Carousel.Item>
         ))}
-      </div>
+      </Carousel>
     </div>
   );
 }
