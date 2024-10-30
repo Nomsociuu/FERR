@@ -1,5 +1,5 @@
 // trendingServices.js
-import axios from 'axios';
+import axios from "axios";
 
 const baseUrl = 'http://localhost:5000/trending';
 
@@ -37,5 +37,6 @@ export const deleteTrendingItem = (id) => async (dispatch) => {
     dispatch({ type: 'DELETE_TRENDING_SUCCESS', payload: id });
   } catch (error) {
     dispatch({ type: 'DELETE_TRENDING_FAILURE', payload: error.message });
+
   }
 };

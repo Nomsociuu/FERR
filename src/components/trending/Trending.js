@@ -1,4 +1,5 @@
 // Trending.js
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrending } from '../../services/trendingServices';
@@ -6,6 +7,7 @@ import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import './trending.css';
+
 
 function Trending() {
   const dispatch = useDispatch();
@@ -37,6 +39,7 @@ function Trending() {
                 <button className="trailer-button">
                   <FontAwesomeIcon icon={faPlay} size="lg" />
                 </button>
+
               </div>
             </div>
           </Carousel.Item>
