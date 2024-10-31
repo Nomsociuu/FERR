@@ -6,7 +6,7 @@ const Homes = () => {
     useEffect(() => {
         const fetchHomeData = async () => {
             try {
-                const response = await fetch("http://localhost:5000/homeData");
+                const response = await fetch("https://my-json-server.typicode.com/nomsociuu/FERR/homeData");
                 const data = await response.json();
                 setItems(data);
             } catch (error) {
