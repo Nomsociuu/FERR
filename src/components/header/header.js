@@ -50,7 +50,7 @@ const Header = () => {
               <li><a href="/FERR/">Movies</a></li>
               <li><a href="/FERR/">Pages</a></li>
               <li><a href="/FERR/">Pricing</a></li>
-              <li><a href="/trendingCRUD">TrendingCRUD</a></li>
+              
             </ul>
             <button className="toggle" onClick={() => setMobile(!Mobile)}>
               {Mobile ? <i className="fa fa-times"></i> : <i className="fa fa-bars"></i>}
