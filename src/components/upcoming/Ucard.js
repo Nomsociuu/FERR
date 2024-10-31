@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "../../App.css";
+import "../watch/style.css";
 const Ucard = ({ item: { id, cover, name, time } }) => {
   return (
     <>
@@ -11,7 +12,7 @@ const Ucard = ({ item: { id, cover, name, time } }) => {
         <div className="text">
           <h3>{name}</h3>
           <span>{time}</span> <br />
-          {/*<Link to={`/singlepage/${id}`}>*/}
+          {/* <Link to={`/singlepage/${id}`}> */}
           <button className="primary-btn">
             <i className="fa fa-play"></i> PLAY NOW
           </button>

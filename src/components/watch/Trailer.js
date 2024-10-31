@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Card, Button } from "react-bootstrap";
-import Upcoming from "../upcoming/Upcoming";
+import Upcoming from "../upcoming/Upcoming"; // Ensure this component is correctly defined
 import "./style.css";
 
 const Trailer = () => {
@@ -11,7 +10,7 @@ const Trailer = () => {
 
   useEffect(() => {
     const fetchItem = async () => {
-      const response = await fetch(`http://localhost:3000/homeData/${id}`);
+      const response = await fetch(`http://localhost:5000/homeData/${id}`);
       if (response.ok) {
         const data = await response.json();
         setItem(data);
@@ -21,7 +20,7 @@ const Trailer = () => {
     };
 
     const fetchRecommended = async () => {
-      const response = await fetch(`http://localhost:3000/recommended`);
+      const response = await fetch(`http://localhost:5000/recommended`);
       if (response.ok) {
         const data = await response.json();
         setRec(data);
@@ -41,31 +40,29 @@ const Trailer = () => {
   };
 
   const shareOnTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(item.name)}`;
+    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(item?.name)}`;
     window.open(url, "_blank");
   };
 
   return (
-    <Container className="mt-4">
+    <div className="trailer-container">
       {item ? (
-        <Card className="bg-dark text-white">
-          <Card.Body>
-            <Card.Title>{item.name}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {item.time} | HD
-            </Card.Subtitle>
-            <video className="w-100" src={item.video} controls></video>
-            <Card.Text className="mt-3">{item.desc}</Card.Text>
-            <Button variant="primary" onClick={shareOnFacebook} className="mr-2">Share on Facebook</Button>
-            <Button variant="info" onClick={shareOnTwitter}>Share on Twitter</Button>
-          </Card.Body>
-        </Card>
+        <div className="trailer-card">
+          <h1>{item.name}</h1>
+          <h2>{item.time} | HD</h2>
+          <video className="trailer-video" src={item.video} controls></video>
+          <p className="trailer-description">{item.desc}</p>
+          <div className="share-buttons">
+            <button onClick={shareOnFacebook}>Share on Facebook</button>
+            <button onClick={shareOnTwitter}>Share on Twitter</button>
+          </div>
+        </div>
       ) : (
         <div>Loading...</div>
       )}
-      <h2 className="mt-4">Recommended Movies</h2>
+      <h2 className="recommended-title">Recommended Movies</h2>
       <Upcoming items={rec} title='Recommended Movies' />
-    </Container>
+    </div>
   );
 };
 
