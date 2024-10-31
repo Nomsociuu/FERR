@@ -50,8 +50,8 @@ const HomeCard = (props) => {
           <Link to={`/singlepage/${id}`}>
             <button>
               <div className="homeCard-img">
-                <img src="./images/play-button.png" alt="Play Button" />
-                <img src="./images/play.png" className="homeCard-change" alt="Play" />
+                <img src="./FERR/images/play-button.png" alt="Play Button" />
+                <img src="./FERR/images/play.png" className="homeCard-change" alt="Play" />
               </div>
               WATCH TRAILER
             </button>

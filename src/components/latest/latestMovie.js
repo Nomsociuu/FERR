@@ -64,7 +64,7 @@ const LatestMovies = ({ title }) => {
       <div className="container">
         <div className="heading flexSB">
           <h1>Latest Movies</h1>
-          <a href="/movies">View All</a>
+          <a href="/FERR/">View All</a>
         </div>
         <div className="content">
           <Slider {...settings}>
