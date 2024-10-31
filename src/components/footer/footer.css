@@ -33,9 +33,6 @@ footer .img {
 footer span {
   font-size: 12px;
 }
-button {
-  line-height: 30px;
-}
 @media only screen and (max-width: 768px) {
   footer .container {
     display: grid;
