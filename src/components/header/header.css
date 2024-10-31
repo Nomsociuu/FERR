@@ -41,6 +41,74 @@ header button {
   display: none;
 }
 
+/* Basic structure styling for header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the search container */
+.search-container {
+  margin-right: 10px; /* Adjust spacing as needed */
+  position: relative;
+}
+
+.search-container input {
+  height:40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: black;
+}
+
+.movie-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 320%;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.movie-item {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #161616;
+}
+
+.movie-item:hover {
+  background-color: #7a220b;
+}
+
+/* Aligning search bar and buttons properly */
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account i, .account button {
+  margin-left: 10px;
+}
+
+
+
+.movie-item {
+  display: flex; /* Hiển thị theo hàng */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  padding: 10px; /* Khoảng cách xung quanh */
+}
+
+.movie-cover {
+  width: 25%; /* Chiều rộng của hình ảnh bìa */
+  height: 60px; /* Chiều cao của hình ảnh bìa */
+  margin-right: 10px; /* Khoảng cách giữa hình ảnh và tên phim */
+}
 
 @media only screen and (max-width: 768px) {
   header nav .flexSB {
