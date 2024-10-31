@@ -41,7 +41,6 @@ const HomePage = () => {
       <Trending />
       <Upcoming items={recommendedMovies} title="Recommended Movies" />
       {/* <LatestMoviesCarousel /> */}
-      <Homes />
     </>
   );
 };

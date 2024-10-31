@@ -8,7 +8,7 @@
 // import Trending from './components/trending/Trending';
 // import TrendingCRUD from './components/trending/TrendingCRUD';
 // import Trailer from './components/watch/Trailer';
-// import LatestMoviesCarousel from './components/latest/latestMovie'; // Adjust the path as needed
+import LatestMoviesCarousel from './components/latest/latestMovie'; // Adjust the path as needed
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
