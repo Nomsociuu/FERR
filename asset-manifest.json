@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FERR/static/css/main.84441d62.css",
-    "main.js": "/FERR/static/js/main.80d5fe2d.js",
+    "main.js": "/FERR/static/js/main.a09183ad.js",
     "static/js/453.e5b00392.chunk.js": "/FERR/static/js/453.e5b00392.chunk.js",
     "static/media/texure.jpg": "/FERR/static/media/texure.5fd81b0ea718d21dec89.jpg",
     "static/media/slick.svg": "/FERR/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/FERR/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/FERR/index.html",
     "main.84441d62.css.map": "/FERR/static/css/main.84441d62.css.map",
-    "main.80d5fe2d.js.map": "/FERR/static/js/main.80d5fe2d.js.map",
+    "main.a09183ad.js.map": "/FERR/static/js/main.a09183ad.js.map",
     "453.e5b00392.chunk.js.map": "/FERR/static/js/453.e5b00392.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84441d62.css",
-    "static/js/main.80d5fe2d.js"
+    "static/js/main.a09183ad.js"
   ]
 }
