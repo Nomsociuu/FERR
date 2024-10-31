@@ -5,4 +5,5 @@ import latestReducer from './latestReducer';
 
 const store = createStore(latestReducer, composeWithDevTools(applyMiddleware(thunk)));
 
+
 export default store;
