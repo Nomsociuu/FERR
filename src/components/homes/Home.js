@@ -20,7 +20,7 @@ const SamplePrevArrow = (props) => {
     return (
         <div className="control-btn" onClick={onClick}>
             <button className="prev">
-                <i className="fa fa-chevron-left"></i>
+                <i className="fa fa-chevron-left arrerror"></i>
             </button>
         </div>
     );
