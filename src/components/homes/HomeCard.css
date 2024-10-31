@@ -3,7 +3,6 @@
 /* Container chính của HomeCard */
 .homeCard-box {
     position: relative;
-    padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     overflow: hidden;
