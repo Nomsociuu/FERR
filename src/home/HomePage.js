@@ -9,7 +9,6 @@ import { fetchUpcoming } from "../services/UpcomingServices";
 import { UpcomingReducer } from "../reducers/UpcomingReducer";
 import store from "../reducers/latestStore";
 import LatestMoviesCarousel from "../components/latest/latestMovie";
-import HomeCard from "../components/homes/HomeCard";
 
 const HomePage = () => {
   const [upcomingMovies, dispatchUpcoming] = useReducer(UpcomingReducer, []);
