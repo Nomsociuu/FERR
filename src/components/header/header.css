@@ -40,6 +40,8 @@ header button {
 .toggle {
   display: none;
 }
+
+
 @media only screen and (max-width: 768px) {
   header nav .flexSB {
     display: none;
