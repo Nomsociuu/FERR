@@ -1,14 +1,11 @@
 // TrendingCRUD.js
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchTrending,
-  createTrendingItem,
-  updateTrendingItem,
-  deleteTrendingItem,
-} from "../../services/trendingServices";
-import { Modal, Button, Form } from "react-bootstrap";
-import "./trendingCRUD.css";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTrending, createTrendingItem, updateTrendingItem, deleteTrendingItem } from '../../services/trendingServices';
+import { Modal, Button, Form } from 'react-bootstrap';
+import './trendingCRUD.css';
+import Header from '../header/header';
+import Footer from '../footer/footer';
 
 function TrendingCRUD() {
   const dispatch = useDispatch();
@@ -78,6 +75,8 @@ function TrendingCRUD() {
   };
 
   return (
+    <>
+    <Header />
     <div className="trending-crud-container">
       <h2>Manage Trending Items</h2>
 
@@ -246,6 +245,8 @@ function TrendingCRUD() {
         </Modal.Footer>
       </Modal>
     </div>
+    <Footer />
+    </>
   );
 }
 

@@ -5,7 +5,7 @@ const HomeCard = (props) => {
   const { id, cover, name, rating, time, desc, starring, genres, tags, video } = props.item;
 
   return (
-    <div className="box">
+    <div className="box duckpart">
       <div className="coverImage">
         <img src={cover} alt={name} />
       </div>
