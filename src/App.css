@@ -24,7 +24,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .flex {
@@ -41,9 +40,10 @@ button {
   outline: none;
   border: none;
   color: #fff;
-  /* padding: 12px 40px; */
+  padding: 12px 40px;
   font-weight: 500;
   font-size: 17px;
+  line-height: 20px;
 }
 
 .row {
@@ -88,6 +88,7 @@ p {
 .heading a {
   color: #e50813;
 }
+
 /*---------------MovieBox-------------*/
 @media only screen and (max-width: 768px) {
   .MovieBox {
