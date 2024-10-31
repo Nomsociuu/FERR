@@ -76,7 +76,6 @@ function TrendingCRUD() {
 
   return (
     <>
-    <Header />
     <div className="trending-crud-container">
       <h2>Manage Trending Items</h2>
 
@@ -245,7 +244,6 @@ function TrendingCRUD() {
         </Modal.Footer>
       </Modal>
     </div>
-    <Footer />
     </>
   );
 }
