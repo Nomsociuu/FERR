@@ -4,8 +4,9 @@ import Trending from "../components/trending/Trending";
 import Upcoming from "../components/upcoming/Upcoming";
 import { fetchUpcoming } from "../services/UpcomingServices";
 import { UpcomingReducer } from "../reducers/UpcomingReducer";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
+
+import LatestMoviesCarousel from "../components/latest/latestMovie";
+import HomeCard from "../components/homes/HomeCard";
 
 const HomePage = () => {
   const [upcomingMovies, dispatchUpcoming] = useReducer(UpcomingReducer, []);
@@ -34,14 +35,13 @@ const HomePage = () => {
 
   return (
     <>
-      <Header />
-      {/* <Homes /> */}
+      <Homes />
       <Upcoming items={upcomingMovies} title="Upcoming Movies" />
       <Upcoming items={latestMovies} title="Latest Movies" />
       <Trending />
       <Upcoming items={recommendedMovies} title="Recommended Movies" />
-
-      <Footer />
+      {/* <LatestMoviesCarousel /> */}
+      <Homes />
     </>
   );
 };

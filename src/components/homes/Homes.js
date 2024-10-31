@@ -1,23 +1,27 @@
-// // Home.js
-// import React from "react";
-// import Header from "./Header";
-// import Footer from "./Footer";
-// import Trending from "./trending/Trending";
-// import "./homes.css"; // Optional: create a home.css for any additional styling
-
-// const Home = () => {
-//   return (
-//     <div className="home">
-//       <Header />
-//       <main>
-//         <section className="trending-section">
-//           <h2>Trending</h2>
-//           <Trending />
-//         </section>
-//       </main>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default Home;
+import React, { useState, useEffect } from "react";
+import "./home.css";
+import Home from "./Home";
+const Homes = () => {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        const fetchHomeData = async () => {
+            try {
+                const response = await fetch("http://localhost:5000/homeData");
+                const data = await response.json();
+                setItems(data);
+            } catch (error) {
+                console.error("Error fetching home data:", error);
+            }
+        };
+        fetchHomeData();
+    }, []);
+    return (
+        <>
+            <section className="home">
+                <Home items={items} />
+            </section>
+            <div className="margin"></div>
+        </>
+    );
+};
+export default Homes;

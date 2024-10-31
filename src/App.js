@@ -7,16 +7,23 @@ import HomePage from "./home/HomePage";
 import Trending from "./components/trending/Trending";
 import LatestMovies from "./components/latest/latestMovie";
 import TrendingCRUD from "./components/trending/TrendingCRUD";
+import Trailer from "./components/watch/Trailer";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
     <Provider store={store}>
+      <Header />
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/trending" element={<Trending />} />
           <Route path="/trendingCRUD" element={<TrendingCRUD />} />
+          <Route path="/singlepage/:id" element={<Trailer />} />
         </Routes>
       </Router>
+      <Footer />
     </Provider>
   );
 }
