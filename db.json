@@ -106,33 +106,51 @@
   "latest": [
     {
       "id": "1",
-      "cover": "../FERR/images/upcome/u6.png",
-      "name": "King of Jungle",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/upcome/no-country.jpeg",
+      "name": "No Country For Old Men",
+      "time": "2hr : 2mins"
     },
     {
       "id": "2",
-      "cover": "../FERR/images/upcome/u7.jpg",
-      "name": "The illusion",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/upcome/psycho.jpg",
+      "name": "American Psycho",
+      "time": "1hr : 42mins"
     },
     {
       "id": "3",
-      "cover": "../FERR/images/upcome/u1.jpg",
-      "name": "Latest Movie",
+      "cover": "../FERR/images/upcome/brbd.jpg",
+      "name": "Breaking Bad",
       "time": "2hr : 38mins"
     },
     {
       "id": "4",
-      "cover": "../FERR/images/upcome/u5.jpg",
-      "name": "Latest two",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/upcome/budapest.jpg",
+      "name": "The Grand Budapest Hotel",
+      "time": "1hr : 39mins"
     },
     {
       "id": "5",
-      "cover": "../FERR/images/upcome/u4.jpg",
-      "name": "Latest Three",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/upcome/angry.jpg",
+      "name": "12 Angry Men",
+      "time": "1hr : 36mins"
+    },
+    {
+      "id": "6",
+      "cover": "../FERR/images/upcome/whiplash.jpg",
+      "name": "Whiplash",
+      "time": "1hr : 46mins"
+    },
+    {
+      "id": "7",
+      "cover": "../FERR/images/upcome/spider.jpg",
+      "name": "Spider-Man: Across the Spider-Verse",
+      "time": "2hr : 20mins"
+    },
+    {
+      "id": "8",
+      "cover": "../FERR/images/upcome/joe.jpg",
+      "name": "Meet Joe Black",
+      "time": "3hr : 0min"
     }
   ],
   "trending": [
