@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrending, createTrendingItem, updateTrendingItem, deleteTrendingItem } from '../../services/trendingServices';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './trendingCRUD.css';
+
 import Header from '../header/header';
 import Footer from '../footer/footer';
+
 
 function TrendingCRUD() {
   const dispatch = useDispatch();
@@ -23,6 +25,7 @@ function TrendingCRUD() {
     cover: "",
     date: "",
   });
+
 
   useEffect(() => {
     dispatch(fetchTrending());
@@ -43,6 +46,7 @@ function TrendingCRUD() {
         date: "",
       }
     );
+
     setShowModal(true);
   };
 
@@ -65,6 +69,7 @@ function TrendingCRUD() {
     if (modalType === "add") {
       dispatch(createTrendingItem(currentItem));
     } else if (modalType === "update") {
+
       dispatch(updateTrendingItem(currentItem.id, currentItem));
     }
     handleCloseModal();
@@ -78,6 +83,7 @@ function TrendingCRUD() {
     <>
     <div className="trending-crud-container">
       <h2>Manage Trending Items</h2>
+
 
       <div className="trending-grid">
         {trending.map((item) => (
@@ -119,7 +125,6 @@ function TrendingCRUD() {
           </div>
         ))}
       </div>
-
       <Button
         variant="success"
         className="add-button"
@@ -128,12 +133,14 @@ function TrendingCRUD() {
         Add New Item
       </Button>
 
+
       {/* Modal for Add/Update */}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>
             {modalType === "add" ? "Add New Item" : "Update Item"}
           </Modal.Title>
+
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -142,9 +149,11 @@ function TrendingCRUD() {
               <Form.Control
                 type="text"
                 value={currentItem.name}
+
                 onChange={(e) =>
                   setCurrentItem({ ...currentItem, name: e.target.value })
                 }
+
               />
             </Form.Group>
             <Form.Group controlId="formRating">
