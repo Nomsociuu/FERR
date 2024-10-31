@@ -56,33 +56,51 @@
   "upcome": [
     {
       "id": "1",
-      "cover": "../FERR/images/upcome/u1.jpg",
-      "name": "My office Boss",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/img/2025_a1.jpg",
+      "name": "The Legend of the Galactic Heroes: The New Thesis",
+      "time": "50 mins"
     },
     {
       "id": "2",
-      "cover": "../FERR/images/upcome/u2.jpg",
-      "name": "Shadowe",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/img/2025_a2.jpg",
+      "name": "Berserk: The Golden Age Arc - Memorial Edition",
+      "time": "30 mins"
     },
     {
       "id": "3",
-      "cover": "../FERR/images/upcome/u3.jpg",
-      "name": "Another Danger",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/img/2025_a3.jpg",
+      "name": "Sword Art Online: Progressive - Scherzo of Deep Night",
+      "time": "90 mins"
     },
     {
       "id": "4",
-      "cover": "../FERR/images/upcome/u4.jpg",
-      "name": "One Man Army",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/img/2025_a4.jpg",
+      "name": "One Piece: The Red-Haired Pirates",
+      "time": "40 mins"
     },
     {
       "id": "5",
-      "cover": "../FERR/images/upcome/u5.jpg",
-      "name": "Jumbo Queen",
-      "time": "2hr : 38mins"
+      "cover": "../FERR/images/img/2025_a5.jpg",
+      "name": "My Hero Academia: World Heroes' Mission 2",
+      "time": "110 mins"
+    },
+    {
+      "id": "6",
+      "cover": "../FERR/images/img/2025_a6.avif",
+      "name": "Re:Zero - Starting Life in Another World: Season 3",
+      "time": "25 mins"
+    },
+    {
+      "id": "7",
+      "cover": "../FERR/images/img/2025_a7.jpg",
+      "name": "Fate/Grand Order: Solomon",
+      "time": "50 mins"
+    },
+    {
+      "id": "8",
+      "cover": "../FERR/images/img/2025_a8.avif",
+      "name": "Chainsaw Man: Part 2",
+      "time": "25 mins"
     }
   ],
   "latest": [
@@ -228,15 +246,15 @@
     },
     {
       "id": "10",
-    "name": "Attack on Titan: The Final Season",
-    "rating": 9.3,
-    "time": "2hr : 0mins",
-    "desc": "The final battle between humanity and the Titans reaches its climax as the truth about the Titans is revealed.",
-    "starring": "Yuki Kaji, Marina Inoue",
-    "genres": "Action, Drama, Fantasy",
-    "tags": "Action, Drama, Fantasy",
-    "cover": "../FERR/images/img/attack_on_titan.webp",
-    "date": "9-Dec-2020"
+      "name": "Attack on Titan: The Final Season",
+      "rating": 9.3,
+      "time": "2hr : 0mins",
+      "desc": "The final battle between humanity and the Titans reaches its climax as the truth about the Titans is revealed.",
+      "starring": "Yuki Kaji, Marina Inoue",
+      "genres": "Action, Drama, Fantasy",
+      "tags": "Action, Drama, Fantasy",
+      "cover": "../FERR/images/img/attack_on_titan.webp",
+      "date": "9-Dec-2020"
     }
   ],
   "recommended": [
