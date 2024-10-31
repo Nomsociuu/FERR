@@ -89,7 +89,6 @@ p {
   color: #e50813;
 }
 
-/*---------------MovieBox-------------*/
 @media only screen and (max-width: 768px) {
   .MovieBox {
     width: 320px;
