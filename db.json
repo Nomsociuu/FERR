@@ -249,30 +249,6 @@
       "tags": "Action, Romance, Mystery",
       "cover": "../FERR/images/img/tokyo_revengers.png",
       "date": "9-Jul-2021"
-    },
-    {
-      "id": "9",
-      "name": "In This Corner of the World",
-      "rating": 8.0,
-      "time": "2hr : 10mins",
-      "desc": "The story of a young woman living during wartime and the challenges she faces.",
-      "starring": "Non, Masaki Suda",
-      "genres": "Action, Historical, Drama",
-      "tags": "Action, Historical, Drama",
-      "cover": "../FERR/images/img/in_this_corner_of_the_world.webp",
-      "date": "12-Nov-2016"
-    },
-    {
-      "id": "10",
-      "name": "Attack on Titan: The Final Season",
-      "rating": 9.3,
-      "time": "2hr : 0mins",
-      "desc": "The final battle between humanity and the Titans reaches its climax as the truth about the Titans is revealed.",
-      "starring": "Yuki Kaji, Marina Inoue",
-      "genres": "Action, Drama, Fantasy",
-      "tags": "Action, Drama, Fantasy",
-      "cover": "../FERR/images/img/attack_on_titan.webp",
-      "date": "9-Dec-2020"
     }
   ],
   "recommended": [
