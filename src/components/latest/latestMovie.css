@@ -119,3 +119,27 @@
 .play-icon {
   margin-right: 10px;
 }
+
+/* Media query for phones */
+@media (max-width: 480px) {
+  .latest-movies .heading h1 {
+    font-size: 20px;
+  }
+
+  .latest-movies .movie-card img {
+    height: 200px;
+  }
+
+  .latest-movies .movie-info h2 {
+    font-size: 14px;
+  }
+
+  .latest-movies .movie-info p {
+    font-size: 12px;
+  }
+
+  .latest-movies .play-button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
