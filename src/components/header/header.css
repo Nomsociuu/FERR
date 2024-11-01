@@ -1,3 +1,4 @@
+/* Header styling */
 header {
   height: 10vh;
   line-height: 10vh;
@@ -12,17 +13,45 @@ header {
   color: #fff;
   position: relative;
   z-index: 999;
+  transition: background 0.3s ease-in-out;
 }
+header:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Logo styling */
 .logo img {
   width: 150px;
   margin-top: 20px;
   margin-right: 30px;
   margin-bottom: 40px;
 }
+
+/* Links styling */
 header a {
   color: #fff;
   margin-left: 30px;
 }
+
+/* Navigation Menu for Desktop */
+.navMenu-list {
+  display: none; /* Hide by default */
+}
+
+@media only screen and (min-width: 769px) {
+  .navMenu-list {
+    display: flex;
+  }
+}
+
+/* Icon styling */
 header i {
   width: 40px;
   height: 40px;
@@ -31,36 +60,59 @@ header i {
   border-radius: 50%;
   border: 2px solid #fff;
   margin: 0 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
+header i:hover {
+  color: #ff6347;
+  transform: scale(1.1);
+}
+
+/* Button styling */
 header button {
   border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
-.toggle {
-  display: none;
+header button:hover {
+  background-color: #ff6347;
+  transform: scale(1.05);
 }
 
-/* Basic structure styling for header */
+/* Toggle button styling */
+.toggle {
+  display: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.toggle.active {
+  transform: rotate(90deg);
+}
+
+/* Container flex styling */
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Styling for the search container */
+/* Search container styling */
 .search-container {
   position: relative;
 }
-
 .search-container input {
-  height:40px;
+  height: 40px;
   border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
   color: black;
+  transition: border 0.3s ease;
+}
+.search-container input:focus {
+  border: 1px solid #ff6347;
 }
 
+/* Movie list styling */
 .movie-list {
   position: absolute;
   top: 100%;
@@ -73,73 +125,92 @@ header .container {
   border-radius: 5px;
   z-index: 10;
 }
-
 .movie-item {
-  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   cursor: pointer;
   background-color: #161616;
+  transition: background 0.3s ease;
 }
-
 .movie-item:hover {
-  background-color: #7a220b;
+  background-color: #b8451b;
+}
+.movie-cover {
+  width: 25%;
+  height: 60px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.movie-item:hover .movie-cover {
+  transform: scale(1.1);
 }
 
-/* Aligning search bar and buttons properly */
+/* Account styling */
 .account {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.account i, .account button {
+.account i,
+.account button {
   margin-left: 10px;
 }
 
-
-
-.movie-item {
-  display: flex; /* Hiển thị theo hàng */
-  align-items: center; /* Canh giữa theo chiều dọc */
-  padding: 10px; /* Khoảng cách xung quanh */
-}
-
-.movie-cover {
-  width: 25%; /* Chiều rộng của hình ảnh bìa */
-  height: 60px; /* Chiều cao của hình ảnh bìa */
-  margin-right: 10px; /* Khoảng cách giữa hình ảnh và tên phim */
-}
-
+/* Responsive adjustments */
 @media only screen and (max-width: 768px) {
-  header nav .flexSB {
-    display: none;
-  }
-  .account {
-    display: none;
-  }
   .navMenu-list {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #e50813;
     width: 50%;
     height: 100vh;
     z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
-  header ul li {
-    align-items: left;
-    margin-top: 30px;
-    padding: 0 50px;
+
+  .navMenu-list.active {
+    transform: translateX(0);
   }
+
   .toggle {
     display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    position: fixed;
+    top: 20px;
     right: 20px;
-    margin: auto;
-    cursor: pointer;
     background: none;
+    z-index: 10000;
+  }
+
+  /* Hide .account in the header on mobile */
+  header .account {
+    display: none;
+  }
+
+  /* Account section in .navMenu-list for mobile */
+  .navMenu-list .account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px; /* Add space between items */
+  }
+
+  /* Styling for icons in a column layout */
+  .navMenu-list .account i {
+    display: flex;
+    margin-bottom: 10px; /* Space between icons */
+  }
+
+  /* Button container for horizontal alignment */
+  .navMenu-list .account .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; /* Full width to center align */
   }
 }
