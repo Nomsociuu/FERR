@@ -4,7 +4,6 @@ import Ucard from "./Ucard";
 import Slider from "react-slick";
 import { fetchUpcoming } from "../../services/UpcomingServices";
 import { UpcomingReducer } from "../../reducers/UpcomingReducer";
-import "./Upcoming.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -55,14 +54,31 @@ const Upcoming = ({ title }) => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 1024, // Tablets and smaller screens
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 800, // Large mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Small mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false, // Hide arrows for very small screens
+          dots: true, // Use dots instead of arrows
+        },
+      },
     ],
   };
+
   return (
     <>
       <section className="upcome">
